@@ -18,7 +18,7 @@ jobs:
       contents: read
       packages: write
     env:
-      IMAGE_NAME: qolum-backend
+      IMAGE_NAME: app-backend
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GITHUB_REPO_OWNER: ${{ github.repository_owner }}
       IMAGE_TAG: ${{ github.sha }}
