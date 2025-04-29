@@ -87,7 +87,7 @@ jobs:
             echo "${GITHUB_TOKEN}" | docker login ghcr.io -u ${GITHUB_REPO_OWNER} --password-stdin
             envsubst < docker-compose.$ENV.yml > docker-compose.substituted.yml
             mv docker-compose.substituted.yml docker-compose.$ENV.yml
-            docker compose -f docker-compose.$TAG.yml pull
-            docker compose -f docker-compose.$ENV.yml down
-            docker compose -f docker-compose.$ENV.yml up -d
+            docker-compose -f docker-compose.$TAG.yml pull
+            docker-compose -f docker-compose.$ENV.yml down
+            docker-compose -f docker-compose.$ENV.yml up -d
           EOF
