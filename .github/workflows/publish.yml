@@ -71,7 +71,7 @@ jobs:
 
       - name: Transfer Compose File
         run: |
-          scp -i $HOME/.ssh/private_key -P $SERVER_PORT -o StrictHostKeyChecking=no docker-compose.$ENV.yml $SERVER_USER@$SERVER_HOST:~/workspace/backend/
+          scp -i $HOME/.ssh/private_key -P $SERVER_PORT -o StrictHostKeyChecking=no docker-compose.$ENV.yml $SERVER_USER@$SERVER_HOST:~/kamil/
 
       - name: Debug Environment Variables
         run: |
